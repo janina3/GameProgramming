@@ -255,7 +255,6 @@ int EntityIndex = 0;
 int currentCycle = 0;
 int currentBlobFram = 0;
 SheetSprite blob1, blob2;
-SheetSprite GSwitchLsprite, GSwitchULsprite;
 
 
 
@@ -277,14 +276,6 @@ void placeEntity(string type, float placeX, float placeY)
     {
         Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 26.0/SPRITE_COUNT_X, 14.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 0.25);
     }
-    else if (type == "LevelTwo")
-    {
-        Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 29.0/SPRITE_COUNT_X, 29.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 1.0);
-    }
-    else if (type == "LevelThree")
-    {
-        Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 29.0/SPRITE_COUNT_X, 29.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 1.0);
-    }
     else if (type == "Coin")
     {
         Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 2.0/SPRITE_COUNT_X, 2.0/SPRITE_COUNT_Y, 2.0/30.0, 2.0/30.0, 0.25);
@@ -298,17 +289,6 @@ void placeEntity(string type, float placeX, float placeY)
         Entities[EntityIndex].height = 1.0/30.0;
         Entities[EntityIndex].width = 1.0/30.0;
         Entities[EntityIndex].sprite.aspect = 1.0;
-    }
-    else if (type == "GSwitch")
-    {
-        GSwitchLsprite = SheetSprite(tileSheetTexture, 16.0/SPRITE_COUNT_X, 28.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 0.25);
-        GSwitchULsprite = SheetSprite(tileSheetTexture, 17.0/SPRITE_COUNT_X, 28.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 0.25);
-        Entities[EntityIndex].sprite.size = 0.25;
-        Entities[EntityIndex].sprite.aspect = 1.0;
-    }
-    else if (type == "GLock")
-    {
-        Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 15.0/SPRITE_COUNT_X, 6.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 0.25);
     }
     
     EntityIndex++;
@@ -640,31 +620,6 @@ void checkCollisionWithCreature(Entity &creature)
     }
 }
 
-void checkLevelTwo(Entity &ent)
-{
-    ent.getTopBottomLeftRight();
-    if (!((player.bottom >= ent.top)
-          || (player.top <= ent.bottom)
-          || (player.left >= ent.right)
-          || (player.right <= ent.left)))
-    {
-        player.position.y = -4.0;
-        player.position.x = player.originalPosition.x;
-    }
-}
-
-void checkLevelThree(Entity &ent)
-{
-    ent.getTopBottomLeftRight();
-    if (!((player.bottom >= ent.top)
-          || (player.top <= ent.bottom)
-          || (player.left >= ent.right)
-          || (player.right <= ent.left)))
-    {
-        player.position.y = -9.0;
-    }
-}
-
 void checkCollisionWithCoin(Entity &ent)
 {
     ent.getTopBottomLeftRight();
@@ -691,19 +646,6 @@ void checkCollisionWithBlob(Entity &ent)
     }
 }
 
-void checkCollisionWithGSwitch(Entity &ent)
-{
-    ent.getTopBottomLeftRight();
-    if (!((player.bottom >= ent.top)
-          || (player.top <= ent.bottom)
-          || (player.left >= ent.right)
-          || (player.right <= ent.left)))
-    {
-        GreenLock = false;
-        Mix_PlayChannel(-1, collectcoin, 0);
-    }
-}
-
 
 
 void checkPlayerCollisions()
@@ -714,14 +656,6 @@ void checkPlayerCollisions()
         {
             checkCollisionWithCreature(Entities[i]);
         }
-        else if (Entities[i].type == "LevelTwo")
-        {
-            checkLevelTwo(Entities[i]);
-        }
-        else if (Entities[i].type == "LevelThree")
-        {
-            checkLevelThree(Entities[i]);
-        }
         else if (Entities[i].type == "Coin")
         {
             checkCollisionWithCoin(Entities[i]);
@@ -729,10 +663,6 @@ void checkPlayerCollisions()
         else if (Entities[i].type == "Blob")
         {
             checkCollisionWithBlob(Entities[i]);
-        }
-        else if (Entities[i].type == "GSwitch")
-        {
-            checkCollisionWithGSwitch(Entities[i]);
         }
     }
 }
@@ -1119,11 +1049,6 @@ int main(int argc, char *argv[])
                 {
                     Entities[i].sprite.Draw(program);
                 }
-                if (Entities[i].type == "LevelTwo")
-                {
-                    modelviewMatrix.Scale(4.00, 2.00, 1.0);
-                    Entities[i].sprite.Draw(program);
-                }
                 if (Entities[i].type == "Coin")
                 {
                     Entities[i].sprite.Draw(program);
@@ -1139,24 +1064,7 @@ int main(int argc, char *argv[])
                         blob2.Draw(program);
                     }
                 }
-                if (Entities[i].type == "GSwitch")
-                {
-                    if (GreenLock)
-                    {
-                        GSwitchLsprite.Draw(program);
-                    }
-                    else
-                    {
-                        GSwitchULsprite.Draw(program);
-                    }
-                }
-                if (Entities[i].type == "GLock")
-                {
-                    if (GreenLock)
-                    {
-                        Entities[i].sprite.Draw(program);
-                    }
-                }
+    
             }
             
             modelviewMatrix.Identity();
