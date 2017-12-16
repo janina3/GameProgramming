@@ -65,7 +65,7 @@ float gravity = -0.2;
 //Sprite Shet
 int spriteSheetTexture;
 int fontTexture;
-//int spaceshipTexture;
+int spaceshipTexture;
 
 //Gameplay
 float health = 100;
@@ -612,7 +612,7 @@ public:
 
 
 //Setup
-//Entity SpaceshipPicture;
+Entity SpaceshipPicture;
 Entity player;
 
 void SetupPlayer()
@@ -777,9 +777,9 @@ int main(int argc, char *argv[])
     fontTexture = LoadTexture(RESOURCE_FOLDER"font1.png");
     
     tileSheetTexture = LoadTexture(RESOURCE_FOLDER"arne_sprites.png");
-    //spaceshipTexture = LoadTexture(RESOURCE_FOLDER"spaceship.jpg");
-    //SpaceshipPicture.sprite = SheetSprite(spaceshipTexture, 0.0, 0.0, 1.0, 1.0, 1.0);
-    //SpaceshipPicture.position.x = -10.0;
+    spaceshipTexture = LoadTexture(RESOURCE_FOLDER"spaceship.jpg");
+    SpaceshipPicture.sprite = SheetSprite(spaceshipTexture, 0.0, 0.0, 1.0, 1.0, 1.0);
+    SpaceshipPicture.position.x = -10.0;
     
     
     state = STATE_START_SCREEN;
@@ -1010,8 +1010,8 @@ int main(int argc, char *argv[])
         
         else if (state == STATE_START_SCREEN)
         {
-            //SpaceshipPicture.position.x = lerp(SpaceshipPicture.position.x, -2.0, 0.3);
-            //SpaceshipPicture.position.y = lerp(SpaceshipPicture.position.y, -0.5, 0.3);
+            SpaceshipPicture.position.x = lerp(SpaceshipPicture.position.x, -2.0, 0.3);
+            SpaceshipPicture.position.y = lerp(SpaceshipPicture.position.y, -0.5, 0.3);
         }
         
         
@@ -1019,10 +1019,10 @@ int main(int argc, char *argv[])
         //Start
         if (state == STATE_START_SCREEN)
         {
-            //modelviewMatrix.Identity();
-            //modelviewMatrix.Translate(SpaceshipPicture.position.x, SpaceshipPicture.position.y, 0.0);
-            //modelviewMatrix.Scale(3.0, 4.5, 0.0);
-            //program.SetModelviewMatrix(modelviewMatrix);
+            modelviewMatrix.Identity();
+            modelviewMatrix.Translate(SpaceshipPicture.position.x, SpaceshipPicture.position.y, 0.0);
+            modelviewMatrix.Scale(3.0, 4.5, 0.0);
+            program.SetModelviewMatrix(modelviewMatrix);
             
             modelviewMatrix.Identity();
             modelviewMatrix.Translate(0.0, 1.00, 0.0);
