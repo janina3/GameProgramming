@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B0B87291FE22CDF002E6D7D /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B0B87281FE22CDF002E6D7D /* level1.txt */; };
 		6B333A121FE2206B0031F64C /* arcade.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B3339FA1FE2206B0031F64C /* arcade.wav */; };
 		6B333A131FE2206B0031F64C /* arne_sprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B3339FB1FE2206B0031F64C /* arne_sprites.png */; };
 		6B333A141FE2206B0031F64C /* collectcoin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B3339FC1FE2206B0031F64C /* collectcoin.wav */; };
@@ -23,6 +22,9 @@
 		6B333A211FE2206B0031F64C /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B333A0D1FE2206B0031F64C /* ShaderProgram.cpp */; };
 		6B333A221FE2206B0031F64C /* vertex_textured.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6B333A101FE2206B0031F64C /* vertex_textured.glsl */; };
 		6B333A231FE2206B0031F64C /* vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6B333A111FE2206B0031F64C /* vertex.glsl */; };
+		6B7C65D01FE5891B005A7A92 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B7C65CD1FE5891B005A7A92 /* level1.txt */; };
+		6B7C65D11FE5891B005A7A92 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B7C65CE1FE5891B005A7A92 /* level2.txt */; };
+		6B7C65D21FE5891B005A7A92 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B7C65CF1FE5891B005A7A92 /* level3.txt */; };
 		6BDE11891FE1B3F900E3D2D3 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDE11881FE1B3F900E3D2D3 /* SDL2_mixer.framework */; };
 		6D5A86AE19AE5C710066C1FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5A86AD19AE5C710066C1FD /* Cocoa.framework */; };
 		6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D5A86B619AE5C710066C1FD /* InfoPlist.strings */; };
@@ -34,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B0B87281FE22CDF002E6D7D /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		6B3339FA1FE2206B0031F64C /* arcade.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = arcade.wav; sourceTree = "<group>"; };
 		6B3339FB1FE2206B0031F64C /* arne_sprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arne_sprites.png; sourceTree = "<group>"; };
 		6B3339FC1FE2206B0031F64C /* collectcoin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collectcoin.wav; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		6B333A0F1FE2206B0031F64C /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		6B333A101FE2206B0031F64C /* vertex_textured.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex_textured.glsl; sourceTree = "<group>"; };
 		6B333A111FE2206B0031F64C /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.glsl; sourceTree = "<group>"; };
+		6B7C65CD1FE5891B005A7A92 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		6B7C65CE1FE5891B005A7A92 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		6B7C65CF1FE5891B005A7A92 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = "<group>"; };
 		6BDE11881FE1B3F900E3D2D3 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = /Library/Frameworks/SDL2_mixer.framework; sourceTree = "<absolute>"; };
 		6D5A86AA19AE5C710066C1FD /* NYUCodebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYUCodebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5A86AD19AE5C710066C1FD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -184,7 +188,9 @@
 				6B333A031FE2206B0031F64C /* fragment_textured.glsl */,
 				6B333A041FE2206B0031F64C /* fragment.glsl */,
 				6B333A051FE2206B0031F64C /* Images.xcassets */,
-				6B0B87281FE22CDF002E6D7D /* level1.txt */,
+				6B7C65CD1FE5891B005A7A92 /* level1.txt */,
+				6B7C65CE1FE5891B005A7A92 /* level2.txt */,
+				6B7C65CF1FE5891B005A7A92 /* level3.txt */,
 				6B333A091FE2206B0031F64C /* main.cpp */,
 				6B333A0A1FE2206B0031F64C /* Matrix.cpp */,
 				6B333A0B1FE2206B0031F64C /* Matrix.h */,
@@ -252,13 +258,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B333A131FE2206B0031F64C /* arne_sprites.png in Resources */,
-				6B0B87291FE22CDF002E6D7D /* level1.txt in Resources */,
 				6B333A161FE2206B0031F64C /* InfoPlist.strings in Resources */,
 				6D5A86B819AE5C710066C1FD /* InfoPlist.strings in Resources */,
 				6B333A171FE2206B0031F64C /* font1.png in Resources */,
+				6B7C65D21FE5891B005A7A92 /* level3.txt in Resources */,
 				6B333A141FE2206B0031F64C /* collectcoin.wav in Resources */,
 				6D5A86C619AE5C710066C1FD /* Images.xcassets in Resources */,
 				6B333A181FE2206B0031F64C /* fragment_textured.glsl in Resources */,
+				6B7C65D11FE5891B005A7A92 /* level2.txt in Resources */,
+				6B7C65D01FE5891B005A7A92 /* level1.txt in Resources */,
 				6B333A191FE2206B0031F64C /* fragment.glsl in Resources */,
 				6B333A121FE2206B0031F64C /* arcade.wav in Resources */,
 				6B333A201FE2206B0031F64C /* NYUCodebase-Info.plist in Resources */,
