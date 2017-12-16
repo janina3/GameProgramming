@@ -44,7 +44,6 @@ int fontTexture;
 //Matrix
 Matrix projectionMatrix;
 Matrix modelviewMatrix;
-Matrix orthographicMatrix;
 
 //Physics
 float friction_x = 10.0;
@@ -425,7 +424,7 @@ ShaderProgram Setup()
     projectionMatrix.SetOrthoProjection(-3.70, 3.70, -2.0f, 2.0f, -1.0f, 1.0f);
     
     program.SetProjectionMatrix(projectionMatrix);
-    program.SetModelviewMatrix(orthographicMatrix);
+    program.SetModelviewMatrix(modelviewMatrix);
     
     spriteSheetTexture = LoadTexture(RESOURCE_FOLDER"sheet.png");
     fontTexture = LoadTexture(RESOURCE_FOLDER"pixel_font.png");

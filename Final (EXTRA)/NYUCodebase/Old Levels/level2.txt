@@ -1,0 +1,169 @@
+[header]
+width=15
+height=40
+tilewidth=12
+tileheight=12
+orientation=orthogonal
+
+[tilesets]
+tileset=My Repository/Final (EXTRA)/NYUCodebase/arne_sprites.png,16,16,0,0
+
+[layer]
+type=Tile Layer 1
+data=
+33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,33,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,33,33,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,33,33,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,33,33,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,33,33,33,33,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,33,33,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,33,33,33,33,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,33,33,33,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,33,33,33,33,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,33,33,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,33,33,33,33,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,33,33,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,33,33,33,33,33,33,33,33,33,33,33,33
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=7,38,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=1,35,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=7,26,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=7,14,1,1
+
+[Object Layer 1]
+# Creature
+type=Creature
+location=7,32,1,1
+
+[Object Layer 1]
+# Creature
+type=Creature
+location=7,20,1,1
+
+[Object Layer 1]
+# Creature
+type=Creature
+location=6,7,1,1
+
+[Object Layer 1]
+# Creature
+type=Creature
+location=9,5,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=3,35,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=11,29,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=12,29,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=9,26,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=4,23,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=3,23,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=1,23,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=8,20,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=11,17,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=12,17,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=6,14,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=1,11,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=3,11,1,1
+
+[Object Layer 1]
+# End
+type=End
+location=12,3,1,1
+
+[Object Layer 1]
+# Start
+type=Start
+location=11,38,1,1
+

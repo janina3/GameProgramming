@@ -1,0 +1,124 @@
+[header]
+width=15
+height=30
+tilewidth=12
+tileheight=12
+orientation=orthogonal
+
+[tilesets]
+tileset=My Repository/Final (EXTRA)/NYUCodebase/arne_sprites.png,16,16,0,0
+
+[layer]
+type=Tile Layer 1
+data=
+33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,33,33,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,33,33,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,33,33,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,33,33,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,33,33,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,33,33,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,33,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,33,33,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,33,33,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,33,33,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,0,0,0,0,0,0,0,0,0,0,0,33,
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,33,
+33,33,33,33,33,33,33,33,33,33,33,33,33,33,33
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=6,22,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=8,22,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=10,16,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=9,17,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=4,12,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=3,12,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=4,8,1,1
+
+[Object Layer 1]
+# Coin
+type=Coin
+location=5,8,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=3,24,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=11,20,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=6,14,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=7,6,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=9,4,1,1
+
+[Object Layer 1]
+# Blob
+type=Blob
+location=10,28,1,1
+
+[Object Layer 1]
+# End
+type=End
+location=12,2,1,1
+
+[Object Layer 1]
+# Start
+type=Start
+location=1,26,1,1
+
