@@ -282,14 +282,6 @@ void placeEntity(string type, float placeX, float placeY)
     {
         Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 26.0/SPRITE_COUNT_X, 14.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 0.25);
     }
-    else if (type == "LevelTwo")
-    {
-        Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 29.0/SPRITE_COUNT_X, 29.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 1.0);
-    }
-    else if (type == "LevelThree")
-    {
-        Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 29.0/SPRITE_COUNT_X, 29.0/SPRITE_COUNT_Y, 1.0/30.0, 1.0/30.0, 1.0);
-    }
     else if (type == "Coin")
     {
         Entities[EntityIndex].sprite = SheetSprite(tileSheetTexture, 2.0/SPRITE_COUNT_X, 2.0/SPRITE_COUNT_Y, 2.0/30.0, 2.0/30.0, 0.25);
@@ -645,31 +637,6 @@ void checkCollisionWithCreature(Entity &creature)
     }
 }
 
-void checkLevelTwo(Entity &ent)
-{
-    ent.getTopBottomLeftRight();
-    if (!((player.bottom >= ent.top)
-          || (player.top <= ent.bottom)
-          || (player.left >= ent.right)
-          || (player.right <= ent.left)))
-    {
-        player.position.y = -4.0;
-        player.position.x = player.originalPosition.x;
-    }
-}
-
-void checkLevelThree(Entity &ent)
-{
-    ent.getTopBottomLeftRight();
-    if (!((player.bottom >= ent.top)
-          || (player.top <= ent.bottom)
-          || (player.left >= ent.right)
-          || (player.right <= ent.left)))
-    {
-        player.position.y = -9.0;
-    }
-}
-
 void checkCollisionWithCoin(Entity &ent)
 {
     ent.getTopBottomLeftRight();
@@ -703,14 +670,6 @@ void checkPlayerCollisions()
         if (Entities[i].type == "Creature")
         {
             checkCollisionWithCreature(Entities[i]);
-        }
-        else if (Entities[i].type == "LevelTwo")
-        {
-            checkLevelTwo(Entities[i]);
-        }
-        else if (Entities[i].type == "LevelThree")
-        {
-            checkLevelThree(Entities[i]);
         }
         else if (Entities[i].type == "Coin")
         {
@@ -1092,11 +1051,6 @@ int main(int argc, char *argv[])
                 program.SetModelviewMatrix(modelviewMatrix);
                 if (Entities[i].type == "Creature")
                 {
-                    Entities[i].sprite.Draw(program);
-                }
-                if (Entities[i].type == "LevelTwo")
-                {
-                    modelviewMatrix.Scale(4.00, 2.00, 1.0);
                     Entities[i].sprite.Draw(program);
                 }
                 if (Entities[i].type == "Coin")
